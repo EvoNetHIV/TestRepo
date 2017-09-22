@@ -303,6 +303,12 @@ input_parameters_primary<-function(){
     percent_eligible_on_prep = 1,
     start_prep_campaign = 5e5,
     prob_tx_droput          = 0,
+   percent_condom_users= 1, # non-users never use condoms when partnered with other non-users.  users will use condoms with some probability
+    compact_el_divisor=1e5,
+   ave_rel_dur_start = 5*365,
+   condom_use_rel_dur = FALSE,
+   condom_use_age = FALSE,
+   age_condom_use_halves = 50, # Only used when condom_use_age is true
     mean_test_interval_male  = 365,
     mean_test_interval_female = 442,
     mean_test_interval_under25 = 365,

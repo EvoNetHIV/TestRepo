@@ -94,6 +94,7 @@ new_additions_fxn <- function(input_list,dat,index,type=c("births","initial"),at
                                           size=total_new, replace=T,
                                           prob=dat$param$tx_schedule_props)
   
+  input_list$condom_user[index] <- rbinom(total_new,1,dat$param$percent_condom_users)
   
   input_list$CD4_nadir[index] <- 1
   
@@ -109,11 +110,15 @@ new_additions_fxn <- function(input_list,dat,index,type=c("births","initial"),at
   
   input_list$CYP_6_slow[index] = rbinom(total_new,1,dat$param$prob_CYP_6_slow)
   
+  
+  
   #prep related (sarah, juandalyn)
   input_list$pos_partner_duration[index] <- 0
   input_list$known_pos_partner_duration[index] <- 0
   input_list$no_partners_past_prep[index] <- 0
   input_list$no_partners_now_prep[index] <- 0
+  
+  
   
   #-----------------------------
   #these variables need different functions for initial population and births

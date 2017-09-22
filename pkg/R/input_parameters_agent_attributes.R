@@ -87,7 +87,8 @@ input_parameters_agent_attributes <-function(){
     "no_partners_now_prep",              "have_diag_partner",
     "have_disc_partner",                 "on_prep",                      
     "prep_decrease",                     "eligible_for_prep",
-    "prep_list",                         "known_pos_partner_duration")
+    "prep_list",                         "known_pos_partner_duration",
+    "condom_user")
     ##############################
   ) #end of  list
   
